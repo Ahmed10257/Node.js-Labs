@@ -1,0 +1,17 @@
+5 + 4 = 9
+5 + 6 = 11
+5 * 6 = 30
+8 + 6 = 14
+8 - 6 = 2
+8 * 6 = 48
+8 / 6 = 1.3333333333333333
+ Result = 27
+ Result = 27
+ Result = 27
+ Result = 28
+Result = 0
+ Result = -28
+ Result = 0
+ Result = NaN
+ Result = 0.000462962962962963
+Result = 2160
