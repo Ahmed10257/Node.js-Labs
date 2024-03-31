@@ -1,4 +1,3 @@
-const { log } = require("util");
 const Ticket = require("./ticket");
 const ticket = new Ticket(1, 123, "LAX", "JFK", "10/20/2021");
 
