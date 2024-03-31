@@ -11,8 +11,7 @@ http
     var length = numbers.length;
     //Getting the Operation from the URL
     var operation = url.split("/")[1];
-    // var num1 = parseInt(url.split("/")[2]);
-    // var num2 = parseInt(url.split("/")[3]);
+
     var result;
     //Checking the operation and performing the calculation
     if (operation === "add") {
