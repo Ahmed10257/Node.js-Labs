@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome</h1>
+      <div class="card">
+        <p>Thank you for submitting your information.</p>
+        <p>Your information</p>
+        <ul>
+          <li>Name: <span id="name">{UserName}</span></li>
+          <li>Email: <span id="email">{Email}</span></li>
+          <li>Address: <span id="address">{Address}</span></li>
+          <li>Phone: <span id="phone">{Phone}</span></li>
+        </ul>
+      </div>
+      <!-- <div class="button">
+        <button onclick="getData()">Get All Data</button>
+      </div> -->
+      <!-- <div>
+        <table border="1">
+          <thead>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Phone</th>
+          </thead>
+          <tbody id="table"></tbody>
+        </table>
+      </div>
+    </div> -->
+    <script>
+      function getData() {
+        fetch("../../Server-Side/data.json")
+          .then((response) => {
+            return response.json();
+          })
+          .then((data) => {
+            let table = document.getElementById("table");
+            data.forEach((element) => {
+              table.innerHTML += `
+              <tr>
+                <td>${element.UserName}</td>
+                <td>${element.Email}</td>
+                <td>${element.Address}</td>
+                <td>${element.Phone}</td>
+              </tr>
+              `;
+            });
+          })
+          .catch((err) => {
+            console.log("Error fetching data:", err);
+          });
+      }
+    </script>
+    <!-- <script src="../scripts/welcome.js"></script> -->
+  </body>
+</html>
